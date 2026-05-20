@@ -20,10 +20,6 @@ body {
 
 .hostinger-header {
     position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
     background-color: #ffffff;
     display: flex;
     align-items: center;
@@ -31,6 +27,7 @@ body {
     padding: 0 40px; 
     border-bottom: 1px solid #e0e0e0;
     z-index: 1000; 
+    top: 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.61); 
 }
 
@@ -107,37 +104,45 @@ body {
     background-color: #d8d4d4;
 
 }
-
-.content-video {
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 150vh;
+.content-video{
+display: flex;
+flex-direction: row;
+justify-content: center;
+height: 100vh;
+align-items: center;
 }
-
-.content-video__hostinguer {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 60px 40px;
-    margin-top: 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-}
-
 .content-video__info {
+    position: relative; 
+    width: 1000px;           
+    max-width: 700px;  
     display: flex;
-    flex-direction: row;
-    position: relative;
-}
-.btn-pausa {
-    border: 1px solid white;
-    border-radius: 50%;
-    background-color: white;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.21);
-    display: flex;
-    align-items: center;
-    position: absolute;
 
+}
+
+
+.video-hostinguer {
+    width: 100%;        
+    height: 100%;
+
+}
+
+
+.btn-pausa {
+    position: absolute;          
+    background: rgba(0, 0, 0, 0.6); 
+    color: #ffffff;                 
+    border: none;
+    padding: 8px;
+    border-radius: 50%;             
+    cursor: pointer;
+    right: 0px;
+    bottom: 0px;
+    font-size: 1.5rem;              
+    transition: background 0.3s ease;
+}
+
+.btn-pausa:hover {
+    background: rgba(0, 0, 0, 0.9);
 }
 
 
@@ -203,6 +208,9 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.61);
     cursor: pointer;
 }
+.btn-kode:last-child{
+    
+}
 
 .list-kode__option {
     display: flex;
@@ -228,7 +236,10 @@ body {
     border: 1px solid blueviolet;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.459) ;
 }
-
+.label-kode{
+    display: none;
+    
+}
 textarea {
     border-radius: 8px;
     text-align:start;
